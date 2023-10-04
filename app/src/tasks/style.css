@@ -1,0 +1,28 @@
+.task-block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  /* margin: 1rem; */
+  border-radius: 20px;
+  width: 100%;
+  background-color: hsla(0, 0%, 91%, 0.791);
+}
+
+.task-description {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-description-bold {
+  color: gray;
+}
+
+.task-solution {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: rgb(181, 192, 212);
+}
