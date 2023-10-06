@@ -24,7 +24,11 @@ class Task2 extends Component {
             {"For example: findMissingLetter(['a','b','c','d','f']) --> 'e'"}
           </span>
         </div>
-        <div className="task-solution">{"Solution"}</div>
+        <div className="task-solution">
+          <input type="text" value="['a','b','c','d','f']" />
+          <button>{"Submit"}</button>
+          <div>{"....."}</div>
+        </div>
       </div>
     );
   }

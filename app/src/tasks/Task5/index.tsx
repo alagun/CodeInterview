@@ -35,7 +35,14 @@ class Task2 extends Component {
             }
           </span>
         </div>
-        <div className="task-solution">{"Solution"}</div>
+        <div className="task-solution">
+          <input
+            type="text"
+            value="[[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]"
+          />
+          <button>{"Submit"}</button>
+          <div>{"....."}</div>
+        </div>
       </div>
     );
   }

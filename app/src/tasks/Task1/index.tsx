@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import moveZeros from "./moveZeros";
 
 // Напишите функцию, которая принимает массив и переносит все 0 в конец,
 // не изменяя порядок остальных элементов массива.
@@ -8,6 +9,20 @@ import "./../style.css";
 // moveZeros([false,1,0,1,2,0,1,3,"a"]) --> [false,1,1,2,1,3,"a",0,0]
 
 class Task1 extends Component {
+  state = {
+    inputValue: "[false,1,0,1,2,0,1,3,'a']",
+  };
+
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputValue: event.target.value });
+  };
+
+  handleClick = () => {
+    moveZeros(this.value);
+  };
+
+  value = [false, 1, 0, 1, 2, 0, 1, 3, "a"];
+
   render() {
     return (
       <div className="task-block">
@@ -24,7 +39,13 @@ class Task1 extends Component {
             }
           </span>
         </div>
-        <div className="task-solution">{"Solution"}</div>
+        <div className="task-solution">
+          <select name="country" onChange={this.handleInputChange}>
+            <option value={"value1"}>{'[false,1,0,1,2,0,1,3,"a"]'}</option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{"....."}</div>
+        </div>
       </div>
     );
   }

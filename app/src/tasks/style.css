@@ -25,4 +25,18 @@
   padding: 1rem;
   border-radius: 20px;
   background-color: rgb(181, 192, 212);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task-solution > input {
+  width: 44%;
+}
+.task-solution > button {
+  width: 10%;
+  cursor: pointer;
+}
+.task-solution > div {
+  width: 44%;
 }

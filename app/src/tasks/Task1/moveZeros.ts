@@ -1,9 +1,12 @@
-type Props = {
-  arr: Array<any>;
-};
+// type Props = {
+//   // value?: string;/
+//   value: number | string | boolean;
+// };
 
-const moveZeros = ({ arr }: Props) => {
-  return arr;
+const moveZeros = (value: any) => {
+  // const moveZeros = (value: string) => {
+  console.log(value);
+  return value;
 };
 
 export default moveZeros;

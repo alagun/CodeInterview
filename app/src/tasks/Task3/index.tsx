@@ -48,7 +48,11 @@ class Task3 extends Component {
             }
           </span>
         </div>
-        <div className="task-solution">{"Solution"}</div>
+        <div className="task-solution">
+          <input type="text" value="['Alex', 'Jacob', 'Mark', 'Max']" />
+          <button>{"Submit"}</button>
+          <div>{"....."}</div>
+        </div>
       </div>
     );
   }
