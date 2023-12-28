@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import busStops from "./busStops";
 
 // Представим автобус, забирающий и высаживающий людей на каждой остановке.
 // Дан массив массивов, первый элемент которых равен числу пассажиров,
@@ -19,6 +20,26 @@ import "./../style.css";
 // busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]) --> 17
 
 class Task2 extends Component {
+  state = {
+    inputValue: [
+      [3, 0],
+      [9, 1],
+      [4, 10],
+      [12, 2],
+      [6, 1],
+      [7, 10],
+    ],
+    result: null,
+  };
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputValue: JSON.parse(event.target.value) });
+  };
+
+  handleClick = () => {
+    this.setState({
+      result: busStops(this.state.inputValue),
+    });
+  };
   render() {
     return (
       <div className="task-block">
@@ -36,12 +57,16 @@ class Task2 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <input
-            type="text"
-            value="[[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]"
-          />
-          <button>{"Submit"}</button>
-          <div>{"....."}</div>
+          <select name="country" onChange={this.handleInputChange}>
+            <option
+              value={"[[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]"}
+            >
+              {"[[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]"}
+            </option>
+            <option value={"[[3, 0], [9, 1]]"}>{"[[3, 0], [9, 1]"}</option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );
