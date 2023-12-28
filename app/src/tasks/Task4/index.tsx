@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import anagrams from "./anagrams";
 
 // Что такое анаграмма?
 
@@ -17,6 +18,22 @@ import "./../style.css";
 // anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) --> ['aabb', 'bbaa']
 
 class Task4 extends Component {
+  state = {
+    inputWord: "abba",
+    inputValue: ["aabb", "abcd", "bbaa", "dada", "adad"],
+    result: "",
+  };
+
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputWord: event.target.value });
+  };
+
+  handleClick = () => {
+    this.setState({
+      result: anagrams(this.state.inputWord, this.state.inputValue),
+    });
+  };
+
   render() {
     return (
       <div className="task-block">
@@ -34,9 +51,12 @@ class Task4 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <input type="text" value="'abba', ['aabb', 'abcd', 'bbaa', 'dada']" />
-          <button>{"Submit"}</button>
-          <div>{"....."}</div>
+          <select name="country" onChange={this.handleInputChange}>
+            <option value={"abba"}>{"abba"}</option>
+            <option value={"daad"}>{"daad"}</option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );
