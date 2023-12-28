@@ -11,6 +11,7 @@ import moveZeros from "./moveZeros";
 class Task1 extends Component {
   state = {
     inputValue: "[false,1,0,1,2,0,1,3,'a']",
+    result: "",
   };
 
   handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -18,7 +19,7 @@ class Task1 extends Component {
   };
 
   handleClick = () => {
-    moveZeros(this.value);
+    this.setState({ result: moveZeros(this.value) });
   };
 
   value = [false, 1, 0, 1, 2, 0, 1, 3, "a"];
@@ -44,7 +45,7 @@ class Task1 extends Component {
             <option value={"value1"}>{'[false,1,0,1,2,0,1,3,"a"]'}</option>
           </select>
           <button onClick={this.handleClick}>{"Submit"}</button>
-          <div>{"....."}</div>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );
