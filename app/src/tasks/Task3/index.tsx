@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import likes from "./likes";
 
 // Вы, наверное, знаете систему «лайков» по Facebook и другим страницам.
 // Люди могут "лайкать" сообщения в блогах,изображения или другие предметы.
@@ -16,6 +17,19 @@ import "./../style.css";
 // likes(['Alex', 'Jacob', 'Mark', 'Max']) --> 'Alex, Jacob and 2 others like this'
 
 class Task3 extends Component {
+  state = {
+    inputValue: [],
+    result: "",
+  };
+
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputValue: JSON.parse(event.target.value) });
+  };
+
+  handleClick = () => {
+    this.setState({ result: likes(this.state.inputValue) });
+  };
+
   render() {
     return (
       <div className="task-block">
@@ -49,9 +63,19 @@ class Task3 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <input type="text" value="['Alex', 'Jacob', 'Mark', 'Max']" />
-          <button>{"Submit"}</button>
-          <div>{"....."}</div>
+          <select name="country" onChange={this.handleInputChange}>
+            <option value={"[]"}>{"[]"}</option>
+            <option value={'["Peter"]'}>{"['Peter']"}</option>
+            <option value={'["Jacob", "Alex"]'}>{"['Jacob', 'Alex']"}</option>
+            <option value={'["Max", "John", "Mark"]'}>
+              {"['Max', 'John', 'Mark']"}
+            </option>
+            <option value={'["Alex", "Jacob", "Mark", "Max"]'}>
+              {'["Alex", "Jacob", "Mark", "Max"]'}
+            </option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );
