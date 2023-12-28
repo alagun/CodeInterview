@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import findMissingLetter from "./findMissingLetter";
 
 // Найдите недостающую букву.
 // Напишите функцию,  которая принимает в качестве параметра массив букв,
@@ -10,6 +11,19 @@ import "./../style.css";
 // findMissingLetter(['a','b','c','d','f']) --> 'e'
 
 class Task2 extends Component {
+  state = {
+    inputValue: ["a", "b", "c", "d", "f"],
+    result: "",
+  };
+
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputValue: event.target.value });
+  };
+
+  handleClick = () => {
+    this.setState({ result: findMissingLetter(this.state.inputValue) });
+  };
+
   render() {
     return (
       <div className="task-block">
@@ -25,9 +39,15 @@ class Task2 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <input type="text" value="['a','b','c','d','f']" />
-          <button>{"Submit"}</button>
-          <div>{"....."}</div>
+          <select
+            name="country"
+            onChange={this.handleInputChange}
+            value={`${this.state.inputValue}`}
+          >
+            <option value={"value1"}>{"['a','b','c','d','f']"}</option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );

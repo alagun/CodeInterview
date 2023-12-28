@@ -41,7 +41,11 @@ class Task1 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <select name="country" onChange={this.handleInputChange}>
+          <select
+            name="country"
+            onChange={this.handleInputChange}
+            value={this.state.inputValue}
+          >
             <option value={"value1"}>{'[false,1,0,1,2,0,1,3,"a"]'}</option>
           </select>
           <button onClick={this.handleClick}>{"Submit"}</button>
