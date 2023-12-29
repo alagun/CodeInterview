@@ -19,7 +19,7 @@ import busStops from "./busStops";
 // Например:
 // busStops([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]) --> 17
 
-class Task2 extends Component {
+class Task5 extends Component {
   state = {
     inputValue: [
       [3, 0],
@@ -73,4 +73,4 @@ class Task2 extends Component {
   }
 }
 
-export default Task2;
+export default Task5;

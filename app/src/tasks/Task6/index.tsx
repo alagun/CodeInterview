@@ -10,7 +10,7 @@ import longest from "./longest";
 // Например:
 // longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") --> "abcdefklmopqxy"
 
-class Task2 extends Component {
+class Task6 extends Component {
   state = {
     inputValue: ["xyaabbbccccdefww", "xxxxyyyyabklmopq"],
     result: null,
@@ -54,4 +54,4 @@ class Task2 extends Component {
   }
 }
 
-export default Task2;
+export default Task6;
