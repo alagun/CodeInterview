@@ -12,7 +12,7 @@ import anagram from "./anagram";
 class Task8 extends Component {
   state = {
     inputValue: ["кот", "ток", "кто"],
-    result: null,
+    result: "",
   };
   handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     this.setState({ inputValue: JSON.parse(event.target.value) });
@@ -47,7 +47,7 @@ class Task8 extends Component {
             </option>
           </select>
           <button onClick={this.handleClick}>{"Submit"}</button>
-          <div>{this.state.result}</div>
+          <div>{`${this.state.result}`}</div>
         </div>
       </div>
     );

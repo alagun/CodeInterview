@@ -1,8 +1,14 @@
-const anagram = (val: string[]) => {
+const anagram = (array: string[]) => {
   try {
-    // if (str.length < 4) throw new Error();
-
-    return val;
+    for (let i = 1; i < array.length; i++) {
+      if (
+        array[i - 1].split("").sort().join() !==
+        array[i].split("").sort().join()
+      ) {
+        return false;
+      }
+    }
+    return true;
   } catch (error) {
     console.log("Error:", error);
   }
