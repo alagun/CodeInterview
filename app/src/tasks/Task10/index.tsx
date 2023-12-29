@@ -1,17 +1,15 @@
 import { Component } from "react";
 import "./../style.css";
-import anagram from "./anagram";
+import carry from "./carry";
 
-// Дан массив слов, необходимо определить,
-// составлены ли все слова из одних и тех же символов.
+// Напишите функцию, которая возвращает сумму таким образом:
 
 // Например:
-// ["кот", "ток", "кто"] --> true
-// ["кот", "тк", "кТо"] --> false
+// f(1)(2)(3) --> 6
 
 class Task8 extends Component {
   state = {
-    inputValue: ["кот", "ток", "кто"],
+    inputValue: [1, 2, 3],
     result: "",
   };
   handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -20,13 +18,13 @@ class Task8 extends Component {
 
   handleClick = () => {
     this.setState({
-      result: anagram(this.state.inputValue),
+      result: carry(this.state.inputValue),
     });
   };
   render() {
     return (
       <div className="task-block">
-        <div className="task-title">{"anagram"}</div>
+        <div className="task-title">{"carry"}</div>
         <div className="task-description">
           <span>
             {
@@ -34,17 +32,13 @@ class Task8 extends Component {
             }
           </span>
           <span className="task-description-bold">
-            {'For example: anagram(["кот", "ток", "кто"] --> true'}
+            {"For example: carry(1)(2)(3) --> 6"}
           </span>
         </div>
         <div className="task-solution">
           <select name="country" onChange={this.handleInputChange}>
-            <option value={'["кот", "ток", "кто"]'}>
-              {'["кот", "ток", "кто"]'}
-            </option>
-            <option value={'["лот", "тл", "лТо"]'}>
-              {'["лот", "тл", "лТо"]'}
-            </option>
+            <option value={"[1, 2, 3]"}>{"(1)(2)(3)"}</option>
+            <option value={"[10, 20, 5]"}>{"(10)(20)(5)"}</option>
           </select>
           <button onClick={this.handleClick}>{"Submit"}</button>
           <div>{`${this.state.result}`}</div>

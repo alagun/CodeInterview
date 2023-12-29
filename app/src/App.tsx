@@ -8,7 +8,7 @@ import Task6 from "./tasks/Task6";
 import Task7 from "./tasks/Task7";
 import Task8 from "./tasks/Task8";
 import Task9 from "./tasks/Task9";
-// import Task10 from "./tasks/Task10";
+import Task10 from "./tasks/Task10";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <Task7 />
       <Task8 />
       <Task9 />
-      {/* <Task10 /> */}
+      <Task10 />
     </div>
   );
 }
