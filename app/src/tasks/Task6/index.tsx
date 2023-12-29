@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./../style.css";
+import longest from "./longest";
 
 // Даны две строки, которые содержат только буквы от a - z.
 // Ваша задача написать функцию, которая возвращает
@@ -10,10 +11,23 @@ import "./../style.css";
 // longest("xyaabbbccccdefww", "xxxxyyyyabklmopq") --> "abcdefklmopqxy"
 
 class Task2 extends Component {
+  state = {
+    inputValue: ["xyaabbbccccdefww", "xxxxyyyyabklmopq"],
+    result: null,
+  };
+  handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ inputValue: JSON.parse(event.target.value) });
+  };
+
+  handleClick = () => {
+    this.setState({
+      result: longest(this.state.inputValue),
+    });
+  };
   render() {
     return (
       <div className="task-block">
-        <div className="task-title">{"busStops"}</div>
+        <div className="task-title">{"longest"}</div>
         <div className="task-description">
           <span>
             {
@@ -27,9 +41,13 @@ class Task2 extends Component {
           </span>
         </div>
         <div className="task-solution">
-          <input type="text" value="xyaabbbccccdefww, xxxxyyyyabklmopq" />
-          <button>{"Submit"}</button>
-          <div>{"....."}</div>
+          <select name="country" onChange={this.handleInputChange}>
+            <option value={"['xyaabbbccccdefww','xxxxyyyyabklmopq']"}>
+              {"['xyaabbbccccdefww','xxxxyyyyabklmopq']"}
+            </option>
+          </select>
+          <button onClick={this.handleClick}>{"Submit"}</button>
+          <div>{this.state.result}</div>
         </div>
       </div>
     );

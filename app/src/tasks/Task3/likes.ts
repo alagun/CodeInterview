@@ -24,7 +24,6 @@ const likes = (arr: string[]) => {
   } catch (error) {
     console.log("Error:", error);
   }
-  return arr;
 };
 
 export default likes;

@@ -14,7 +14,7 @@ function App() {
       <Task3 />
       <Task4 />
       <Task5 />
-      {/* <Task6 /> */}
+      <Task6 />
     </div>
   );
 }
