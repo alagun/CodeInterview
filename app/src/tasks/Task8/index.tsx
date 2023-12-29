@@ -37,7 +37,7 @@ class Task8 extends Component {
             }
           </span>
           <span className="task-description-bold">
-            {"For example: squareDigits(9119) --> 811181"}
+            {'For example: maskify("4556364607935616") --> "############5616"'}
           </span>
         </div>
         <div className="task-solution">
