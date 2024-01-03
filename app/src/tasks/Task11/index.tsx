@@ -39,11 +39,11 @@ class Task11 extends Component {
         </div>
         <div className="task-solution">
           <select name="country" onChange={this.handleInputChange}>
-            <option value={"[7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7]"}>
-              {"[7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 7]"}
+            <option value={'[7, "z", "z", "z", 3, 7, "z", 7, "z", 3, 5, 7]'}>
+              {'[7, "z", "z", "z", 3, 7, "z", 7, "z", 3, 5, 7]'}
             </option>
-            <option value={"[7, 'z', 7, 'z', 3, 7, 7, 7, 'z', 7, 5, 7]"}>
-              {"[7, 'z', 7, 'z', 3, 7, 7, 7, 'z', 7, 5, 7]"}
+            <option value={'[7, "z", 7, "z", 3, 7, 7, 7, "z", 7, 5, 7]'}>
+              {'[7, "z", 7, "z", 3, 7, 7, 7, "z", 7, 5, 7]'}
             </option>
           </select>
           <button onClick={this.handleClick}>{"Submit"}</button>
