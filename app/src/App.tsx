@@ -13,7 +13,7 @@ import Task11 from "./tasks/Task11";
 import Task12 from "./tasks/Task12";
 import Task13 from "./tasks/Task13";
 import Task14 from "./tasks/Task14";
-// import Task15 from "./tasks/Task15";
+import Task15 from "./tasks/Task15";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
       <Task12 />
       <Task13 />
       <Task14 />
-      {/* <Task15 /> */}
+      <Task15 />
     </div>
   );
 }
