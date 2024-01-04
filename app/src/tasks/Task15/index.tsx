@@ -12,12 +12,13 @@ class Task15 extends Component {
     result: "",
   };
   handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    this.setState({ inputValue: JSON.parse(event.target.value) });
+    this.setState({ inputValue: event.target.value });
   };
 
   handleClick = () => {
     this.setState({
       result: ColonOdd(this.state.inputValue),
+      // result: 1,
     });
   };
   render() {
