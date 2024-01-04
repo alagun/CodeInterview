@@ -11,7 +11,7 @@ import Task9 from "./tasks/Task9";
 import Task10 from "./tasks/Task10";
 import Task11 from "./tasks/Task11";
 import Task12 from "./tasks/Task12";
-// import Task13 from "./tasks/Task13";
+import Task13 from "./tasks/Task13";
 // import Task14 from "./tasks/Task14";
 // import Task15 from "./tasks/Task15";
 // import Task16 from "./tasks/Task16";
@@ -35,7 +35,7 @@ function App() {
       <Task10 />
       <Task11 />
       <Task12 />
-      {/* <Task13 /> */}
+      <Task13 />
       {/* <Task14 /> */}
       {/* <Task15 /> */}
       {/* <Task16 /> */}
