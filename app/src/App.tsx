@@ -12,13 +12,8 @@ import Task10 from "./tasks/Task10";
 import Task11 from "./tasks/Task11";
 import Task12 from "./tasks/Task12";
 import Task13 from "./tasks/Task13";
-// import Task14 from "./tasks/Task14";
+import Task14 from "./tasks/Task14";
 // import Task15 from "./tasks/Task15";
-// import Task16 from "./tasks/Task16";
-// import Task17 from "./tasks/Task17";
-// import Task18 from "./tasks/Task18";
-// import Task19 from "./tasks/Task19";
-// import Task20 from "./tasks/Task20";
 
 function App() {
   return (
@@ -36,13 +31,8 @@ function App() {
       <Task11 />
       <Task12 />
       <Task13 />
-      {/* <Task14 /> */}
+      <Task14 />
       {/* <Task15 /> */}
-      {/* <Task16 /> */}
-      {/* <Task17 /> */}
-      {/* <Task18 /> */}
-      {/* <Task19 /> */}
-      {/* <Task20 /> */}
     </div>
   );
 }
