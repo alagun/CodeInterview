@@ -1,6 +1,7 @@
 const removeDuplicates = (array: string[]) => {
   try {
-    return array;
+    const setArray = new Set(array);
+    return Array.from(setArray);
   } catch (error) {
     console.log("Error:", error);
   }

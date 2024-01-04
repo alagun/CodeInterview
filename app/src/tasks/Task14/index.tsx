@@ -14,7 +14,17 @@ import removeDuplicates from "./removeDuplicates";
 
 class Task14 extends Component {
   state = {
-    inputValue: ["php", "css", "script", "html", "java"],
+    inputValue: [
+      "php",
+      "php",
+      "css",
+      "css",
+      "script",
+      "script",
+      "html",
+      "html",
+      "java",
+    ],
     result: "",
   };
   handleInputChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
